@@ -11,9 +11,8 @@ const {NotFoundErr} = require('./error-types/not-found-err')
 
 const { authRouter } = require('./api/v1/auth/user.auth.routes')
 const { bookRouter } = require("./api/v1/book/book.routes")
-// const { communityRouter } = require('./api/v1/community/community.routes')
-// const { memberRouter } = require('./api/v1/member/member.routes')
 
+// file-upload static path if required
 const uploads = path.join(__dirname, "uploads" )
 console.log(uploads)
 
@@ -47,7 +46,7 @@ app.use(bodyparser.urlencoded({ extended: true }))
 //==================================== api routes ==================================
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/book', bookRouter);
-app.use('/api/endpoints', async(req, res) => {
+app.use('/api', async(req, res) => {
   return res.status(200).json({"routes" : {
     "/api/v1/": [
       {"auth": [

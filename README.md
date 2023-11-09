@@ -18,7 +18,7 @@ so, from the deployment link, it cannot directly store the jwt cookie in browser
 
 Back-end Deployment Link
 ---------------
-'i[tbd]'
+https://brew-asses-v1.onrender.com/
 
 Backend Installation
 --------------------
@@ -59,6 +59,7 @@ Please make sure to replace the placeholders (e.g., JWT_KEY, MONGO_URI) with app
 **Get Current User**
 - `GET /api/v1/auth/me`
 <br>
+
 ### Book
 <hr>
 
